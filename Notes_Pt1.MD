@@ -17,6 +17,16 @@ If you are new to JavaScript, then consider taking our JavaScript course and the
 
 The three Codecademy React courses are not a high-level overview. They are a deep dive. Take your time! By the end, you will be ready to program in React with a real understanding of what you're doing.
 
-### Intro to JSX
+## Intro to JSX
 The following line is an example of what JSX could look like. It is a hybrid of both JS and HTML.
+
 `const h1 = <h1>Hello world</h1>;`
+
+JSX is a JavaScript syntax extension, but since it's not JS, web browsers can't read it. You need a compilier to run JSX code.
+
+JSX elements are treated as JavaScript expressions. They can go anywhere that JavaScript expressions can go.
+
+That means that a JSX element can be saved in a variable, passed to a function, stored in an object or array...you name it.
+
+Here's an example of a JSX element being saved in a variable:
+`const navBar = <nav>I am a nav bar</nav>;`
