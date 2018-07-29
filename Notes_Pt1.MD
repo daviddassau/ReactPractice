@@ -56,3 +56,23 @@ var myDiv = (
   </div>
 );
 ```
+
+There's a rule that we haven't mentioned: a JSX expression must have exactly one outermost element.
+
+In other words, this code will work:
+```JSX
+const paragraphs = (
+  <div id="i-am-the-outermost-element">
+    <p>I am a paragraph.</p>
+    <p>I, too, am a paragraph.</p>
+  </div>
+);
+```
+
+But this will not work:
+```JSX
+const paragraphs = (
+  <p>I am a paragraph.</p> 
+  <p>I, too, am a paragraph.</p>
+);
+```
