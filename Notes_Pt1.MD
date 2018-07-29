@@ -30,3 +30,12 @@ That means that a JSX element can be saved in a variable, passed to a function, 
 
 Here's an example of a JSX element being saved in a variable:
 `const navBar = <nav>I am a nav bar</nav>;`
+
+JSX elements can have attributes, just like HTML elements can.
+
+A JSX attribute is written using HTML-like syntax: a name, followed by an equals sign, followed by a value. The value should be wrapped in quotes, like this:
+
+```JavaScript
+const p1 = <p id="large">foo</p>;
+const p2 = <p id="small">bar</p>;
+```
