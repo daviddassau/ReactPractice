@@ -43,3 +43,16 @@ A JSX attribute is written using HTML-like syntax: a name, followed by an equals
 const p1 = <p id="large">foo</p>;
 const p2 = <p id="small">bar</p>;
 ```
+
+You can nest JSX elements inside of other JSX elements, just like in HTML.
+
+If a JSX expression takes up more than one line, then you must wrap the multi-line JSX expression in parentheses. This looks strange at first, but you get used to it:
+```JSX
+var myDiv = (
+  <div>
+  	<h1>
+      Hello world
+    </h1>
+  </div>
+);
+```
