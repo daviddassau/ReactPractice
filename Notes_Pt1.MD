@@ -76,3 +76,75 @@ const paragraphs = (
   <p>I, too, am a paragraph.</p>
 );
 ```
+### Rendering JSX
+Rendering JSX means to make it appear on screen. Let's take a look at this code block:
+```JSX
+ReactDOM.render(<h1>Hello world</h1>,
+document.getElementById('app'));
+```
+`ReactDOM` is the name of a JavaScript library. This library contains several React-specific methods, all of which deal with the DOM in some way or another.
+
+We'll talk more later about how `ReactDOM` got into your file. For now, just understand that it's yours to use.
+
+Move slightly to the right, and you can see one of ReactDOM's methods: `ReactDOM.render()`.
+
+`ReactDOM.render()` is the most common way to render JSX. It takes a JSX expression, creates a corresponding tree of DOM nodes, and adds that tree to the DOM. That is the way to make a JSX expression appear onscreen.
+
+### Passing a Variable to ReactDOM.render()
+ReactDOM.render()'s first argument should evaluate to a JSX expression, it doesn't have to literally be a JSX expression.
+
+The first argument could also be a variable, so long as that variable evaluates to a JSX expression.
+```JSX
+var myList = (
+	<ul>
+    <li>My</li>
+    <li>name's</li>
+    <li>David</li>
+  </ul>
+);
+
+ReactDOM.render(
+myList,
+document.getElementById('app')
+);
+```
+
+### The Virtual DOM
+One special thing about ReactDOM.render() is that it only updates DOM elements that have changed.
+
+That means that if you render the exact same thing twice in a row, the second render will do nothing:
+```JSX
+const hello = <h1>Hello world</h1>;
+
+// This will add "Hello world" to the screen:
+
+ReactDOM.render(hello, document.getElementById('app'));
+
+// This won't do anything at all:
+
+ReactDOM.render(hello, document.getElementById('app'));
+```
+This is significant! Only updating the necessary DOM elements is a large part of what makes React so successful.
+
+## ADVANCED JSX
+### class vs className
+This lesson will cover more advanced JSX. You'll learn some powerful tricks, and some common errors to avoid.
+
+Grammar in JSX is mostly the same as in HTML, but there are subtle differences to watch out for. Probably the most frequent of these involves the word class.
+
+In HTML, it's common to use class as an attribute name:
+```JSX
+<h1 class="big">Hey</h1>
+```
+In JSX, you can't use the word class! You have to use className instead:
+```JSX
+<h1 className="big">Hey</h1>
+```
+This is because JSX gets translated into JavaScript, and class is a reserved word in JavaScript.
+
+When JSX is rendered, JSX className attributes are automatically rendered as class attributes.
+
+
+
+
+
