@@ -1,4 +1,5 @@
-# Codecademy React Tutorial - Notes Pt. 1
+# Codecademy React Tutorial
+### Notes Pt. 1
 
 React.js is a JavaScript library. It was developed by engineers at Facebook.
 
@@ -15,3 +16,7 @@ If you are new to React, then this course is for you! No prior React knowledge i
 If you are new to JavaScript, then consider taking our JavaScript course and then returning to React.
 
 The three Codecademy React courses are not a high-level overview. They are a deep dive. Take your time! By the end, you will be ready to program in React with a real understanding of what you're doing.
+
+### Intro to JSX
+The following line is an example of what JSX could look like. It is a hybrid of both JS and HTML.
+`const h1 = <h1>Hello world</h1>;`
