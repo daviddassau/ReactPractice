@@ -230,4 +230,64 @@ const owlCat = (
 );
 ```
 
+### Event Listeners in JSX
+JSX elements can have event listeners, just like HTML elements can. Programming in React means constantly working with event listeners.
+
+You create an event listener by giving a JSX element a special attribute. Here's an example:
+```JSX
+<img onClick={myFunc} />
+```
+An event listener attribute's name should be something like onClick or onMouseOver: the word on, plus the type of event that you're listening for. You can see a list of valid event names here: https://reactjs.org/docs/events.html#supported-events
+
+An event listener attribute's value should be a function. The above example would only work if myFunc were a valid function that had been defined elsewhere:
+```JSX
+function myFunc() {
+  alert('Make myFunc the pFunc... omg that was horrible i am so sorry');
+}
+
+<img onClick={myFunc} />
+```
+
+### JSX Conditionals: If Statements That Don't Work
+How can you write a conditional, if you can't inject an if statement into JSX?
+
+Well, one option is to write an if statement, and not inject it into JSX.
+
+Look at if.js. Follow the if statement, all the way from line 6 down to line 18.
+```JSX
+if (user.age >= drinkingAge) {
+  message = (
+    <h1>
+      Hey, check out this alcoholic beverage!
+    </h1>
+  );
+} else {
+  message = (
+    <h1>
+      Hey, check out these earrings I got at Claire's!
+    </h1>
+  );
+}
+```
+if.js works, because the words if and else are not injected in between JSX tags. The if statement is on the outside, and no JavaScript injection is necessary.
+
+This is a common way to express conditionals in JSX.
+
+### JSX Conditionals: The Ternary Operator
+There's a more compact way to write conditionals in JSX: the ternary operator.
+
+The ternary operator works the same way in React as it does in regular JavaScript. However, it shows up in React surprisingly often.
+
+Recall how it works: you write x ? y : z, where x, y, and z are all JavaScript expressions. When your code is executed, x is evaluated as either "truthy" or "falsy." If x is truthy, then the entire ternary operator returns y. If x is falsy, then the entire ternary operator returns z. Here's a nice explanation if you need a refresher.
+
+Here's how you might use the ternary operator in a JSX expression:
+```JSX
+const headline = (
+  <h1>
+    { age >= drinkingAge ? 'Buy Drink' : 'Do Teen Stuff' }
+  </h1>
+);
+```
+In the above example, if age is greater than or equal to drinkingAge, then headline will equal `<h1>Buy Drink</h1>`. Otherwise, headline will equal `<h1>Do Teen Stuff</h1>`.
+
 
