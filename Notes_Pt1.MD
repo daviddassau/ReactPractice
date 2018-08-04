@@ -348,5 +348,12 @@ const liArray = [
 ```
 
 ### Keys
-
+When you make a list in JSX, sometimes your list will need to include something called `keys`:
+```JSX
+<ul>
+  <li key="li-01">Example1</li>
+  <li key="li-02">Example2</li>
+  <li key="li-03">Example3</li>
+</ul>
+```
 
